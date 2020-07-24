@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresMVC.Models;
 using System.Collections.Generic;
+using System;
 
 namespace PierresMVC.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests :  IDisposable
   {
+
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()

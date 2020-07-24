@@ -10,7 +10,7 @@ namespace PierresMVC.Models
     public Order(string description)
     {
       Description = description;
-      _instances.Add(this); // New code.
+      _instances.Add(this);
     }
 
     public static List<Order> GetAll()
@@ -22,6 +22,5 @@ namespace PierresMVC.Models
     {
       _instances.Clear();
     }
-
   }
 }

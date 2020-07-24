@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using PierresMVC.Models;
 
-namespace ProjectName.Controllers
+namespace PierresMVC.Controllers
 {
   public class HomeController : Controller
   {

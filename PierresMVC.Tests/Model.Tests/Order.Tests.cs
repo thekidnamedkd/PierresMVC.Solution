@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PierresMVC.Models;
+using System.Collections.Generic;
 
 namespace PierresMVC.Tests
 {
@@ -24,18 +25,22 @@ namespace PierresMVC.Tests
     }
     [TestMethod]
     public void SetDescription_SetDescription_String()
-    {
-      //Arrange
+    { 
       string description = "Local SE Bakery, coffee + light";
       Order newOrder = new Order(description);
 
-      //Act
       string updatedDescription = "Local SE Bakery, coffee + light fare for families";
       newOrder.Description = updatedDescription;
       string result = newOrder.Description;
 
-      //Assert
       Assert.AreEqual(updatedDescription, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> { };
+      List<Order> result = Order.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }

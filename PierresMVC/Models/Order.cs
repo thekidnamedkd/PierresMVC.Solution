@@ -1,7 +1,7 @@
-namespace PierresMVC
+namespace PierresMVC.Models
 {
-  public class Orders
+  public class Order
   {
-    
+
   }
 }

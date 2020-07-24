@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using PierresMVC.Models;
 
 namespace PierresMVC.Controllers
 {

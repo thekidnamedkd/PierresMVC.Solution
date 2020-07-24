@@ -1,6 +1,6 @@
-namespace PierresMVC
+namespace PierresMVC.Models
 {
-  public class Vendors
+  public class Vendor
   {
   
   }

@@ -1,6 +1,6 @@
 # _PIERRES MVC_
 
-#### _Week 9 Independent Project_
+#### _C# Week 2 Independent Project_
 
 #### By _**KEVIN DAVIS**_
 

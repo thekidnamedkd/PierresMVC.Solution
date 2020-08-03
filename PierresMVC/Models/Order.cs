@@ -4,6 +4,7 @@ namespace PierresMVC.Models
 {
   public class Order
   {
+    public string OrderId { get; set;}
     public string Description { get; set; }
   private static List<Order> _instances = new List<Order> {};
 

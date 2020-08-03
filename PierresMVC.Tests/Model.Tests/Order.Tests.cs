@@ -7,12 +7,7 @@ namespace PierresMVC.Tests
 {
   [TestClass]
   public class OrderTests :  IDisposable
-  {
-
-    public void Dispose()
-    {
-      Order.ClearAll();
-    }
+  {xw
 
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()

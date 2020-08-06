@@ -13,11 +13,11 @@ namespace PierresMVC.Models
 
     public Order(string description, string price, string date)
     {
-      OrderId = _instances.Count;
       OrderDesc = description;
       OrderPrice = price;
       OrderDate = date;
       _instances.Add(this);
+      OrderId = _instances.Count;
     }
 
     public static List<Order> GetAll()

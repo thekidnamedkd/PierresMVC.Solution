@@ -42,5 +42,11 @@ namespace PierresMVC.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetAll_ReturnsInstanceofOrder_OrderList()
+    {
+      Assert.AreEqual(1, result);
+    }
   }
 }

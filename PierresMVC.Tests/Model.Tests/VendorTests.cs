@@ -3,11 +3,17 @@ using PierresMVC.Models;
 using System.Collections.Generic;
 using System;
 
-namespace PierresMVC.Tests
+namespace PierresMVC.Tests 
 {
+
   [TestClass]
-  public class VendorTest
+  public class VendorTest : IDisposable
   {
+    public void Dispose()
+    {
+      Vendor.ClearAll();
+    }
+
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {

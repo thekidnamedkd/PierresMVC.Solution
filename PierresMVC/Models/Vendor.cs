@@ -15,10 +15,10 @@ namespace PierresMVC.Models
       _instances.Add(this);
       VendorId = _instances.Count;
     }
-    
     public static void ClearAll()
     {
       _instances.Clear();
     }
+
   }
 }

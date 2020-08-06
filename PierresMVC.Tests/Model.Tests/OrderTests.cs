@@ -16,32 +16,23 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test");
+      Order newOrder = new Order("test", "test", "test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
     [TestMethod]
     public void GetDescription_ReturnsDescription_String()
     {
-      string description = "Local SE Bakery, coffee + light";
+      string description = "Bread and Pastries";
+      string price = "$90";
+      string date = "08.05.20";
 
-      Order newOrder = new Order(description);
-      string result = newOrder.Description;
+      Order newOrder = new Order(description, price, date);
+      string result = newOrder.OrderDesc;
 
       Assert.AreEqual(description, result);
     }
-    [TestMethod]
-    public void SetDescription_SetDescription_String()
-    { 
-      string description = "Local SE Bakery, coffee + light";
-      Order newOrder = new Order(description);
-
-      string updatedDescription = "Local SE Bakery, coffee + light fare for families";
-      newOrder.Description = updatedDescription;
-      string result = newOrder.Description;
-
-      Assert.AreEqual(updatedDescription, result);
-    }
+    
     [TestMethod]
     public void GetAll_ReturnsEmptyList_OrderList()
     {

@@ -4,12 +4,19 @@ namespace PierresMVC.Models
 {
   public class Order
   {
-    public string Description { get; set; }
+    public int OrderId { get; }
+    public string OrderDesc { get; set; }
+    public string OrderPrice { get; set; }
+    public string OrderDate { get; set; }
+    
     private static List<Order> _instances = new List<Order> {};
 
-    public Order(string description)
+    public Order(string description, string price, string date)
     {
-      Description = description;
+      OrderId = _instances.Count;
+      OrderDesc = description;
+      OrderPrice = price;
+      OrderDate = date;
       _instances.Add(this);
     }
 

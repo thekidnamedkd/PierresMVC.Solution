@@ -6,14 +6,14 @@
 
 ## Description
 
-_An application to keep track of Pierre's Bakery's orders and demonstrate basic MVC applictions._
+_An application to keep track of Pierre's Bakery's orders and demonstrate basic MVC applications._
 
 ### Specs
 | Spec | Input | Output | Done? |
 | :-------------     | :------------- | :------------- | :------------- | 
-| Program will create an order. | input: bread | output: bread | [ ] |
-| Program will create a list of orders. | input: bread, pastry | output: [bread, pastry] | [ ] |
-| Program will create a vendor class to contain the orders. | input: bread, pastry | output: Cafe.[bread, pastry] | [ ] |
+| Program will create an order. | input: | output: | [X] |
+| Program will create a list of orders. | input:  | output: | [X] |
+| Program will create a vendor class. | input:  | output:  | [X] |
 | Program will have a splash page to send user to a vendor's page. | input:  | output:  | [ ] |
 | Program will have a vendor's page to create a new vendor form. | input: Cafe Coffeeland | output: Cafe Coffeeland | [ ] |
 | Program will display all the orders from a vendor under a vendors page. | input: Cafe Coffeeland | output: [10 baguettes, 4 pastries] | [ ] |

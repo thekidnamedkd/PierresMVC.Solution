@@ -45,6 +45,10 @@ namespace PierresMVC.Tests
       Assert.AreEqual(1, result);
     }
 
-
+    [TestMethod]
+    public void GetAll_ReturnAllVendorObjects_VendorList()
+    {
+      CollectionAssert.AreEqual(list, result);
+    }
   }
 }

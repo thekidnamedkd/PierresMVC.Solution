@@ -21,7 +21,7 @@ namespace PierresMVC.Tests
     }
 
     [TestMethod]
-    public void GetDescription_ReturnsDescription_String()
+    public void GetDescription_ReturnsObjectProperties_String()
     {
       string description = "Bread and Pastries";
       string price = "$90";

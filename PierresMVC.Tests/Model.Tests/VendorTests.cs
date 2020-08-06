@@ -9,10 +9,17 @@ namespace PierresMVC.Tests
   public class VendorTest
   {
     [TestMethod]
-    public void VendorConstructor_CreatesInstancesOfVendor_Vendor()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("test");
+      Vendor newVendor = new Vendor("test", "test");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+
+    [TestMethod]
+    public void GetDescription_ReturnsObjectProperties_String()
+    {
+      Assert.AreEqual(name, result);
+      Assert.AreEqual(description, result2);
     }
   }
 }

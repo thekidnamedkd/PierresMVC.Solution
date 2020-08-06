@@ -32,6 +32,10 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetId_ReturnVendorId_Int()
     {
+      string name = "Cafe Coffeland";
+      string description = "Hip hangout";
+      Vendor newVendor = new Vendor(name, description);
+      int result = newVendor.VendorId;
       Assert.AreEqual(1, result);
     }
 

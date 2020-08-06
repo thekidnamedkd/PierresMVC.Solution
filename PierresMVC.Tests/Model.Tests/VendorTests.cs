@@ -48,6 +48,14 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetAll_ReturnAllVendorObjects_VendorList()
     {
+      string name = "Cafe Coffeland";
+      string description = "Hip hangout";
+      string nameTwo = "Joe's Java";
+      string descriptionTwo = "Hot sludge";
+      Vendor newVendor = new Vendor(name, description);
+      Vendor newVendorTwo = new Vendor(nameTwo, descriptionTwo);
+      List<Vendor> list = new List<Vendor> {newVendor, newVendorTwo};
+      List<Vendor> result = Vendor.GetAll();
       CollectionAssert.AreEqual(list, result);
     }
   }

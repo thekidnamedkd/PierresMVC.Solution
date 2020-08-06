@@ -6,7 +6,7 @@
 
 ## Description
 
-_An application to keep track of Pierre's Bakery's orders._
+_An application to keep track of Pierre's Bakery's orders and demonstrate basic MVC applictions._
 
 ### Specs
 | Spec | Input | Output | Done? |
@@ -44,8 +44,7 @@ _For questions, comments, or collaboration contact me at thekidnamedkd@gmail.com
 * _HTML_
 * _CSS_
 * _C#_
-* _ASP_
-* _.NET_
+* _ASP/.NET_
 
 ### License
 

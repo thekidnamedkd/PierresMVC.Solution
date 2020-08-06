@@ -1,4 +1,0 @@
-using PierresMVC.Models;
-{
-  
-}

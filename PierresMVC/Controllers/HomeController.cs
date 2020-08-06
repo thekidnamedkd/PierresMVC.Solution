@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using PierresMVC.Models;
 using System.Collections.Generic;
+
+using PierresMVC.Models;
 
 namespace PierresMVC.Controllers
 {
@@ -17,9 +18,9 @@ namespace PierresMVC.Controllers
     }
 
     [HttpPost("/orders")]
-    public ActionResult Create(string description)
+    public ActionResult Create(string description, string price, string date)
     {
-      Order myOrder = new Order(description);
+      Order myOrder = new Order(description, price, date);
       return RedirectToAction("Index");
     }
   }

@@ -59,6 +59,17 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetAll_ReturnAllOrderObjects_OrderList()
     {
+      string description = "Bread and Pastries";
+      string price = "$90";
+      string date = "08.05.20";
+      string descriptionTwo = "Just pastries";
+      string priceTwo = "$35";
+      string dateTwo = "08.02.20";
+      Order newOrder = new Order(description, price, date);
+      Order newOrderTwo = new Order(descriptionTwo, priceTwo, dateTwo);
+      List<Order> list = new List<Order> {newOrder, newOrderTwo};
+      List<Order> result = Order.GetAll();
+
       CollectionAssert.AreEqual(list, result);
     }
   }

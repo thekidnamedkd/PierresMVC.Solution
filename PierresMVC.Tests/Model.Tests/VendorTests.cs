@@ -28,5 +28,13 @@ namespace PierresMVC.Tests
       Assert.AreEqual(name, result);
       Assert.AreEqual(description, resultTwo);
     }
+
+    [TestMethod]
+    public void GetId_ReturnVendorId_Int()
+    {
+      Assert.AreEqual(1, result);
+    }
+
+
   }
 }

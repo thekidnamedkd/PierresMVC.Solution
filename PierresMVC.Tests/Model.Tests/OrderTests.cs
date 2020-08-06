@@ -44,7 +44,7 @@ namespace PierresMVC.Tests
     }
 
     [TestMethod]
-    public void GetAll_ReturnsInstanceofOrder_OrderList()
+    public void GetId_ReturnsInstanceofOrder_OrderList()
     {
       string description = "Bread and Pastries";
       string price = "$90";

@@ -18,8 +18,15 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetDescription_ReturnsObjectProperties_String()
     {
+      string name = "Cafe Coffeeland";
+      string description = "Hip hangout";
+      Vendor newVendor = new Vendor(name, description);
+
+      string result = newVendor.VendorName;
+      string resultTwo = newVendor.VendorDesc;
+
       Assert.AreEqual(name, result);
-      Assert.AreEqual(description, result2);
+      Assert.AreEqual(description, resultTwo);
     }
   }
 }

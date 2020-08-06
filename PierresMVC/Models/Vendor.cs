@@ -8,7 +8,7 @@ namespace PierresMVC.Models
     public string VendorName { get; set; }
     public string VendorDesc { get; set; }
 
-    public Vendor(string description, string name)
+    public Vendor(string name, string description)
     {
       VendorName = name;
       VendorDesc = description;

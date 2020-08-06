@@ -44,8 +44,7 @@ _For questions, comments, or collaboration contact me at thekidnamedkd@gmail.com
 * _HTML_
 * _CSS_
 * _C#_
-* _ASP_
-* _.NET_
+* _ASP/.NET_
 
 ### License
 

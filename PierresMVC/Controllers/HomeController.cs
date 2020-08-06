@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using PierresMVC.Models;
 using System.Collections.Generic;
+
+using PierresMVC.Models;
 
 namespace PierresMVC.Controllers
 {

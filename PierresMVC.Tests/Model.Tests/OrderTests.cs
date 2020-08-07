@@ -51,7 +51,7 @@ namespace PierresMVC.Tests
       string date = "08.05.20";
       Order newOrder = new Order(description, price, date);
       
-      int result = newOrder.OrderId;
+      int result = newOrder.Id;
     
       Assert.AreEqual(1, result);
     }

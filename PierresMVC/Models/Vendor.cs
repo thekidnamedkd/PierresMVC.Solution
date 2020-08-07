@@ -4,18 +4,18 @@ namespace PierresMVC.Models
 {
   public class Vendor
   {
-    public int VendorId { get; }
+    public int Id { get; }
     public string VendorName { get; set; }
     public string VendorDesc { get; set; }
     private static List<Vendor> _instances = new List<Vendor> { };
-    public List<Order> Order { get; set; }
+    public List<Order> Orders { get; set; }
     public Vendor(string name, string description)
     {
       VendorName = name;
       VendorDesc = description;
       _instances.Add(this);
-      VendorId = _instances.Count;
-      Order = new List<Order>{};
+      Id = _instances.Count;
+      Orders = new List<Order>{};
     }
     public static void ClearAll()
     {
@@ -27,9 +27,13 @@ namespace PierresMVC.Models
       return _instances;
     }
 
-    public static Vendor Find(int searchVendorId)
+    public static Vendor Find(int searchId)
     {
-      return _instances[searchVendorId-1];
+      return _instances[searchId-1];
+    }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
     }
   }
 }

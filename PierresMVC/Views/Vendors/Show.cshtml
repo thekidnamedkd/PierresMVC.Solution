@@ -1,0 +1,18 @@
+@using PierresMVC.Models;
+
+@{
+  Layout = "_Layout";
+}
+
+<h3>This vendors orders:</h3>
+
+<ol>
+@foreach (Order orders in @Model["orders"])
+{
+  <li><a href='/vendors/@Model["vendor"].VendorId/order/@orders.Id'>@orders.OrderDesc</a></li>
+}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/order/new'>Add a new order</a></p>
+<p><a href='/vendors'>See all vendors</a></p>
+<p><a href='/'>Return Home</a></p>

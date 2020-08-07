@@ -4,7 +4,7 @@ namespace PierresMVC.Models
 {
   public class Order
   {
-    public int OrderId { get; }
+    public int Id { get; }
     public string OrderDesc { get; set; }
     public string OrderPrice { get; set; }
     public string OrderDate { get; set; }
@@ -16,7 +16,7 @@ namespace PierresMVC.Models
       OrderPrice = price;
       OrderDate = date;
       _instances.Add(this);
-      OrderId = _instances.Count;
+      Id = _instances.Count;
     }
 
     public static List<Order> GetAll()
@@ -29,9 +29,9 @@ namespace PierresMVC.Models
       _instances.Clear();
     }
 
-    public static Order Find(int searchOrderId)
+    public static Order Find(int searchId)
     {
-      return _instances[searchOrderId-1];
+      return _instances[searchId-1];
     }
   }
 }

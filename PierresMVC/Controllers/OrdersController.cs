@@ -22,8 +22,19 @@ namespace PierresMVC.Controllers
     [HttpPost("/orders")]
     public ActionResult Create(string description, string price, string date)
     {
-      Order newOrder = new Order(description, price, date);
+      Order Order = new Order(description, price, date);
       return RedirectToAction("Index");
+    }
+
+    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId)
+    {
+      Order order = Order.Find(orderId);
+      Vendor vendor = Vendor.Find(vendorId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("order", order);
+      model.Add("vendor", vendor);
+      return View(model);
     }
 
     [HttpPost("/orders/delete")]

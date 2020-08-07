@@ -41,7 +41,7 @@ namespace PierresMVC.Tests
       string name = "Cafe Coffeland";
       string description = "Hip hangout";
       Vendor newVendor = new Vendor(name, description);
-      int result = newVendor.VendorId;
+      int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
 

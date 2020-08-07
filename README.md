@@ -11,7 +11,7 @@ _An application to keep track of Pierre's Bakery's orders and demonstrate basic 
 ### Specs
 | Spec | Input | Output | Done? |
 | :-------------     | :------------- | :------------- | :------------- | 
-| Program will create an order. | input: | output: | [X] |
+| Program will create an order class. | input: | output: | [X] |
 | Program will create a list of orders. | input:  | output: | [X] |
 | Program will create a vendor class. | input:  | output:  | [X] |
 | Program will have a splash page to send user to a vendor's page. | input:  | output:  | [ ] |

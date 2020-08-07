@@ -8,12 +8,14 @@ namespace PierresMVC.Models
     public string VendorName { get; set; }
     public string VendorDesc { get; set; }
     private static List<Vendor> _instances = new List<Vendor> { };
+    public List<Order> Order { get; set; }
     public Vendor(string name, string description)
     {
       VendorName = name;
       VendorDesc = description;
       _instances.Add(this);
       VendorId = _instances.Count;
+      Order = new List<Order>{};
     }
     public static void ClearAll()
     {
@@ -24,6 +26,5 @@ namespace PierresMVC.Models
     {
       return _instances;
     }
-
   }
 }

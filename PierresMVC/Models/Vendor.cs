@@ -27,7 +27,7 @@ namespace PierresMVC.Models
       return _instances;
     }
 
-    public static Order Find(int searchVendorId)
+    public static Vendor Find(int searchVendorId)
     {
       return _instances[searchVendorId-1];
     }

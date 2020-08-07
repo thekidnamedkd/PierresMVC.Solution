@@ -28,5 +28,10 @@ namespace PierresMVC.Models
     {
       _instances.Clear();
     }
+
+    public static Order Find(int searchOrderId)
+    {
+      return _instances[searchOrderId-1];
+    }
   }
 }

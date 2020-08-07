@@ -68,7 +68,7 @@ namespace PierresMVC.Tests
     Order newOrder = new Order(description, price, date);
     Order newOrderTwo = new Order(descriptionTwo, priceTwo, dateTwo);
 
-    Order result = new Order("test", "test", "test");
+    Order result = Order.Find(2);
 
     Assert.AreEqual(newOrderTwo, result);
   }

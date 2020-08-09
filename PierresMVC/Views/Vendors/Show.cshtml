@@ -4,15 +4,38 @@
   Layout = "_Layout";
 }
 
-<h3>This vendors orders:</h3>
+<h1>@Model["vendors"].VendorName</h1>
+
+@if (Model["orders"].Count == 0)
+{
+  <h4>There are no orders associated with this vendor</h4>
+}
+<ul>
+  @foreach (Order orders in Model["orders"])
+  {
+
+    <li><a href="/vendors/@Model["vendors"].Id/orders/@orders.Id">@orders.OrderDesc</a></li>
+  }
+</ul>
+<br>
+<br>
+<a href="/vendors/@Model["vendors"].Id/orders/new">Add Order</a><br>
+<a href="/">Home</a>
+
+
+
+
+
+@* 
+<h3>This vendor's orders:</h3>
 
 <ol>
 @foreach (Order orders in @Model["orders"])
 {
-  <li><a href='/vendors/@Model["vendor"].VendorId/order/@orders.Id'>@orders.OrderDesc</a></li>
+  <li><a href='/vendors/@Model["vendors"].Id/orders/@orders.Id'>@orders.OrderDesc</a></li>
 }
 </ol>
 
-<p><a href='/vendors/@Model["vendor"].Id/order/new'>Add a new order</a></p>
+<p><a href='/vendors/@Model["vendors"].Id/orders/new'>Add a new order</a></p>
 <p><a href='/vendors'>See all vendors</a></p>
-<p><a href='/'>Return Home</a></p>
+<p><a href='/'>Return Home</a></p> *@

@@ -6,49 +6,22 @@ namespace PierresMVC.Controllers
 {
   public class OrdersController : Controller
   {
-    [HttpGet("/orders")]
-    public ActionResult Index()
+    [HttpGet("/vendors/{vendorId}/orders/new")]
+    public ActionResult New(int vendorId)
     {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
-    }
-
-    [HttpGet("/orders/new")]
-    public ActionResult New()
-    {
-      return View();
-    }
-
-    [HttpPost("/orders")]
-    public ActionResult Create(string description, string price, string date)
-    {
-      Order Order = new Order(description, price, date);
-      return RedirectToAction("Index");
-    }
-
-    [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
-    public ActionResult Show(int vendorId, int orderId)
-    {
-      Order order = Order.Find(orderId);
       Vendor vendor = Vendor.Find(vendorId);
+      return View(vendor);
+    }
+
+    [HttpGet("vendors/{vendorId}/orders/{orderId}")]
+    public ActionResult Show(int vendorId, int orderId, string orderDesc, string orderPrice)
+    {
+      Order orders = Order.Find(orderId);
+      Vendor vendors = Vendor.Find(vendorId);
       Dictionary<string, object> model = new Dictionary<string, object>();
-      model.Add("order", order);
-      model.Add("vendor", vendor);
+      model.Add("orders", orders);
+      model.Add("vendors", vendors);
       return View(model);
-    }
-
-    [HttpPost("/orders/delete")]
-    public ActionResult DeleteAll()
-    {
-      Order.ClearAll();
-      return View();
-    }
-
-    [HttpGet("/orders/{OrderId}")]
-    public ActionResult Show(int OrderId)
-    {
-      Order foundOrder = Order.Find(OrderId);
-      return View(foundOrder);
     }
   }
 }

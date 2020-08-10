@@ -6,7 +6,7 @@
 
 ## Description
 
-_An application to keep track of Pierre's Bakery's - an MVC application to help Pierre track the vendors that purchase baked goods from him and the orders belonging to those vendors.
+_An application to keep track of Pierre's Bakery's - an MVC application to help Pierre track the vendors that purchase baked goods from him and the orders belonging to those vendors._
 
 ### Specs
 | Spec | Input | Output | Done? |
@@ -29,7 +29,7 @@ _An application to keep track of Pierre's Bakery's - an MVC application to help 
 * _There you can use the command ```$dotnet restore``` to open add proper system files._
 * _After those files are in place you can use the command ```$dotnet run``` to open the application in your terminal._
 * _The website should be available at http://localhost:5000/ in the browser of your choice.
-* _If your are experiencing issues, make sure you have the .NET Core installed for your operating system. If you are unsure go here https://dotnet.microsoft.com/download/dotnet-core/2.2. Find the right version for you and install. Then restart from step 3._
+* _If your are experiencing issues, make sure you have the .NET Core installed for your operating system. If you are unsure go here https://dotnet.microsoft.com/download/dotnet-core/2.2. Find the right version for you and install. Restart from top of instructions._
 * _Follow the onscreen prompts._
 
 

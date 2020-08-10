@@ -16,18 +16,19 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "test", "test");
+      Order newOrder = new Order("test", "test", "test", "test");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
     [TestMethod]
     public void GetDescription_ReturnsObjectProperties_String()
     {
+      string title = "Weekend Delivery";
       string description = "Bread and Pastries";
       string price = "$90";
       string date = "08.05.20";
 
-      Order newOrder = new Order(description, price, date);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.OrderDesc;
 
       Assert.AreEqual(description, result);
@@ -46,10 +47,11 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetId_ReturnsInstanceofOrder_OrderList()
     {
+      string title = "Weekend Delivery";
       string description = "Bread and Pastries";
       string price = "$90";
       string date = "08.05.20";
-      Order newOrder = new Order(description, price, date);
+      Order newOrder = new Order(title, description, price, date);
       
       int result = newOrder.Id;
     
@@ -59,14 +61,16 @@ namespace PierresMVC.Tests
   [TestMethod]
   public void Find_ReturnsCorrectOrder_Order()
   {
+    string title = "Weekend Delivery";
     string description = "Bread and Pastries";
     string price = "$90";
     string date = "08.05.20";
+    string titleTwo = "Weeknight Delivery";
     string descriptionTwo = "Just pastries";
     string priceTwo = "$35";
     string dateTwo = "08.02.20";
-    Order newOrder = new Order(description, price, date);
-    Order newOrderTwo = new Order(descriptionTwo, priceTwo, dateTwo);
+    Order newOrder = new Order(title, description, price, date);
+    Order newOrderTwo = new Order(titleTwo, descriptionTwo, priceTwo, dateTwo);
 
     Order result = Order.Find(2);
 
@@ -76,14 +80,16 @@ namespace PierresMVC.Tests
     [TestMethod]
     public void GetAll_ReturnAllOrderObjects_OrderList()
     {
+      string title = "Weekend Delivery";
       string description = "Bread and Pastries";
       string price = "$90";
       string date = "08.05.20";
+      string titleTwo = "Weeknight Delivery";
       string descriptionTwo = "Just pastries";
       string priceTwo = "$35";
       string dateTwo = "08.02.20";
-      Order newOrder = new Order(description, price, date);
-      Order newOrderTwo = new Order(descriptionTwo, priceTwo, dateTwo);
+      Order newOrder = new Order(title, description, price, date);
+      Order newOrderTwo = new Order(titleTwo, descriptionTwo, priceTwo, dateTwo);
       List<Order> list = new List<Order> {newOrder, newOrderTwo};
       List<Order> result = Order.GetAll();
 

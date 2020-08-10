@@ -3,11 +3,14 @@
 }
 
 <h1>Order Details</h1>
+<hr />
 
+<h3><strong>Order: </strong>@Model["orders"].OrderTitle</h3>
 <h3><strong>Order Description: </strong>@Model["orders"].OrderDesc</h3>
 <h3><strong>Order Date: </strong>@Model["orders"].OrderDate</h3>
 <h3><strong>Order Price: </strong>@Model["orders"].OrderPrice</h3>
 
+<br>
 <p><a href="/vendors/@Model["vendors"].Id">Return to Vendor</a></p>
-<p><a href="/vendors">Return to all Vendors</a></p>
+<p><a href="/vendors">Return to All Vendors</a></p>
 <p><a href="/">Return Home</a></p>

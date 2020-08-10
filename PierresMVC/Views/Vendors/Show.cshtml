@@ -5,6 +5,7 @@
 }
 
 <h1>@Model["vendors"].VendorName Orders</h1>
+<h2 style="text-align: center">@Model["vendors"].VendorDesc</h2> 
 <hr />
 
 @if (Model["orders"].Count == 0)
@@ -18,6 +19,7 @@
     <h3>+ <a href="/vendors/@Model["vendors"].Id/orders/@orders.Id">@orders.OrderDesc</a></h3>
   }
 </ul>
+
 <br>
 <p><a href="/vendors/@Model["vendors"].Id/orders/new">Add Order</a><br></p>
 <p><a href="/">Return Home</a></p>

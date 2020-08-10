@@ -5,12 +5,12 @@
 <h1>New Order Form:</h1>
 
 <form action="/vendors/@Model.Id/orders/ " method="post">
-  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+  <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id" required>
   <h3>Description (basic summary of order):</h3>
-  <input id="orderDesc" name="orderDesc" type="text">
+  <input id="orderDesc" name="orderDesc" type="text" required>
   <h3>Price (dollar amount only):</h3>
-  <input id="orderPrice" name="orderPrice" type="text">
+  <input id="orderPrice" name="orderPrice" type="text" required>
   <h3>Date:</h3>
-  <input id="orderDate" name="orderDate" type="date">
+  <input id="orderDate" name="orderDate" type="date" required>
   <button type="submit">Submit</button>
 </form>

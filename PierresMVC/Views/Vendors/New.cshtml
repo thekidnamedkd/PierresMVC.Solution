@@ -2,13 +2,14 @@
   Layout = "_Layout";
 }
 
-<h1>ADD VENDOR</h1>
+<h1>Add Vendor</h1>
+<hr />
 
 <form action="/vendors" method="post">
   <h3>Vendor Name:</h3>
-  <input id="vendorName" name="vendorName" type="text">
+  <input id="vendorName" name="vendorName" type="text" required>
   <button type="submit">Add Vendor</button>
 </form>
-
-<a href="/vendors">Back to vendors</a>
-<a href="/">Back home</a>
+<br>
+<p><a href="/vendors">Return to Vendors</a></p>
+<p><a href="/">Return Home</a></p>
